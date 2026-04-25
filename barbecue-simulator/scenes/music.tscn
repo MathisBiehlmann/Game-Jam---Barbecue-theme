@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://canqovi1mteig"]
 
-[ext_resource type="Script" uid="uid://df2ein85tjpb4" path="res://music.gd" id="1_w5q55"]
+[ext_resource type="Script" uid="uid://df2ein85tjpb4" path="res://scripts/music.gd" id="1_w5q55"]
 [ext_resource type="AudioStream" uid="uid://b8tby4m0x6nis" path="res://assets/Main_muisc.mp3" id="2_lr66j"]
 [ext_resource type="AudioStream" uid="uid://b7qwp0afopfdm" path="res://assets/Hugrill & VDS - Tour du Monde (Visualizer officiel).mp3" id="3_khlsn"]
 
 [node name="Music" type="Node2D" unique_id=1820770911]
 script = ExtResource("1_w5q55")
 
-[node name="Main_music" type="AudioStreamPlayer2D" parent="." unique_id=827060991]
+[node name="Main_music" type="AudioStreamPlayer" parent="." unique_id=160612206]
 stream = ExtResource("2_lr66j")
 autoplay = true
 
-[node name="Tour_du_monde" type="AudioStreamPlayer2D" parent="." unique_id=1250264870]
+[node name="Tour_du_monde" type="AudioStreamPlayer" parent="." unique_id=1642626404]
 stream = ExtResource("3_khlsn")
