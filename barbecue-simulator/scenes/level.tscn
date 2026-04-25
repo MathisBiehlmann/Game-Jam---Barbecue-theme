@@ -1,7 +1,8 @@
-[gd_scene format=4 uid="uid://cqys3c2geq5jk"]
+[gd_scene format=4 uid="uid://cgk28cbdullyt"]
 
 [ext_resource type="Texture2D" uid="uid://rliqthpfrswp" path="res://assets/tiles_spritesheet.png" id="1_2q6dc"]
-[ext_resource type="PackedScene" uid="uid://dv8pvhk2ujw6d" path="res://scenes/dead_zone.tscn" id="2_w7c3h"]
+[ext_resource type="PackedScene" path="res://scenes/dead_zone.tscn" id="2_w7c3h"]
+[ext_resource type="PackedScene" uid="uid://cq5l1qlpwjnuc" path="res://scenes/player.tscn" id="3_w8frs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w7c3h"]
 texture = ExtResource("1_2q6dc")
@@ -199,3 +200,6 @@ tile_set = SubResource("TileSet_w8frs")
 
 [node name="dead_zone" parent="." unique_id=279054326 instance=ExtResource("2_w7c3h")]
 position = Vector2(-8, 911)
+
+[node name="CharacterBody2D" parent="." unique_id=781164052 instance=ExtResource("3_w8frs")]
+position = Vector2(559, 362)

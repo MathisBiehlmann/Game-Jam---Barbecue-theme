@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://cq5l1qlpwjnuc"]
+
+[ext_resource type="Script" uid="uid://biiwf42cmeq5n" path="res://scripts/player.gd" id="1_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://b34oe3bpgqnvu" path="res://assets/Fogo_2.png" id="2_tuyoq"]
+[ext_resource type="Texture2D" uid="uid://clck07l3hsj0o" path="res://assets/Fogo_1.png" id="3_fjrip"]
+[ext_resource type="Texture2D" uid="uid://dcua6juq54v0b" path="res://assets/Fogo_3.png" id="4_smehm"]
+[ext_resource type="Texture2D" uid="uid://cc06wmy5aq6aa" path="res://assets/Fogo_4.png" id="5_ur7pv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4r1p"]
+atlas = ExtResource("3_fjrip")
+region = Rect2(512, 512, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2wvv"]
+atlas = ExtResource("2_tuyoq")
+region = Rect2(512, 512, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3v2ag"]
+atlas = ExtResource("4_smehm")
+region = Rect2(512, 512, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jej6c"]
+atlas = ExtResource("5_ur7pv")
+region = Rect2(512, 512, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sweqy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_tuyoq")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4r1p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2wvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3v2ag")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jej6c")
+}],
+"loop": true,
+"name": &"marche",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2hs0m"]
+radius = 47.0
+height = 120.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=781164052]
+position = Vector2(0, 14)
+script = ExtResource("1_qlg0r")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1211783378]
+position = Vector2(-14.000006, -86)
+scale = Vector2(0.6062011, 0.6965332)
+sprite_frames = SubResource("SpriteFrames_sweqy")
+animation = &"marche"
+frame_progress = 0.013934749
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1975239327]
+position = Vector2(-2, -66)
+shape = SubResource("CapsuleShape2D_2hs0m")
