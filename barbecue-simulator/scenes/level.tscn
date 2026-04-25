@@ -1,11 +1,10 @@
 [gd_scene format=4 uid="uid://cgk28cbdullyt"]
 
 [ext_resource type="Texture2D" uid="uid://rliqthpfrswp" path="res://assets/tiles_spritesheet.png" id="1_2q6dc"]
-[ext_resource type="PackedScene" path="res://scenes/dead_zone.tscn" id="2_w7c3h"]
+[ext_resource type="PackedScene" uid="uid://dv8pvhk2ujw6d" path="res://scenes/dead_zone.tscn" id="2_w7c3h"]
 [ext_resource type="PackedScene" uid="uid://cq5l1qlpwjnuc" path="res://scenes/player.tscn" id="3_w8frs"]
 [ext_resource type="PackedScene" uid="uid://gfjqt0x1k8yr" path="res://scenes/spawner.tscn" id="4_2r41h"]
 [ext_resource type="PackedScene" uid="uid://cql1h1vshf2vj" path="res://scenes/saucisse.tscn" id="4_mx8sn"]
-[ext_resource type="PackedScene" path="res://scenes/saucisse.tscn" id="4_mx8sn"]
 [ext_resource type="PackedScene" path="res://music.tscn" id="5_ppgk2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w7c3h"]
@@ -258,6 +257,8 @@ objet_a_spawn = ExtResource("4_mx8sn")
 [node name="Timer" parent="spawner7" index="0" unique_id=2090249009]
 wait_time = 9.684
 
+[node name="Music" parent="." unique_id=1820770911 instance=ExtResource("5_ppgk2")]
+
 [editable path="spawner"]
 [editable path="spawner2"]
 [editable path="spawner3"]
@@ -265,7 +266,3 @@ wait_time = 9.684
 [editable path="spawner5"]
 [editable path="spawner6"]
 [editable path="spawner7"]
-[node name="Saucisse" parent="." unique_id=65002897 instance=ExtResource("4_mx8sn")]
-position = Vector2(654, -320)
-
-[node name="Music" parent="." unique_id=1820770911 instance=ExtResource("5_ppgk2")]
