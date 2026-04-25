@@ -63,7 +63,7 @@ position = Vector2(-14.000006, -86)
 scale = Vector2(0.6062011, 0.6965332)
 sprite_frames = SubResource("SpriteFrames_sweqy")
 animation = &"marche"
-frame_progress = 0.013934749
+autoplay = "marche"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1975239327]
 position = Vector2(-2, -66)
