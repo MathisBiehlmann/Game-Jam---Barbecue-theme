@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://cc7rc4xy0tia2"]
 
 [ext_resource type="Texture2D" uid="uid://bp1wvj5fgcx8f" path="res://assets/main_theme.webp" id="1_bqqt6"]
-[ext_resource type="Script" uid="uid://dd62pkntvk57x" path="res://scripts/main_menu.gd" id="1_wu84c"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_wu84c"]
 [ext_resource type="Texture2D" uid="uid://c1fdtk5ojnkuq" path="res://assets/play_game.webp" id="2_wu84c"]
 [ext_resource type="Texture2D" uid="uid://b16ylio2ht6q5" path="res://assets/leave_game.webp" id="3_8ln24"]
+[ext_resource type="AudioStream" uid="uid://bc0bxngu15hut" path="res://assets/Overcooked music - Levels 1-1 to 2-4.mp3" id="5_8ln24"]
 
 [node name="main_menu" type="Control" unique_id=659634467]
 layout_mode = 3
@@ -38,6 +39,10 @@ offset_right = 811.0
 offset_bottom = 644.0
 scale = Vector2(0.85, 0.85)
 icon = ExtResource("3_8ln24")
+
+[node name="Music_start" type="AudioStreamPlayer" parent="." unique_id=89674210]
+stream = ExtResource("5_8ln24")
+autoplay = true
 
 [connection signal="button_down" from="play_button" to="." method="_on_play_button_button_down"]
 [connection signal="button_down" from="leave_button" to="." method="_on_leave_button_button_down"]
