@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Barbecue Simulator"
-run/main_scene="uid://cgk28cbdullyt"
+run/main_scene="uid://cc7rc4xy0tia2"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

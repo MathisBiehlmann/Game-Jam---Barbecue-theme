@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cc7rc4xy0tia2"]
+
+[ext_resource type="Texture2D" uid="uid://bp1wvj5fgcx8f" path="res://assets/main_theme.webp" id="1_bqqt6"]
+[ext_resource type="Script" uid="uid://dd62pkntvk57x" path="res://scripts/main_menu.gd" id="1_wu84c"]
+[ext_resource type="Texture2D" uid="uid://c1fdtk5ojnkuq" path="res://assets/play_game.webp" id="2_wu84c"]
+[ext_resource type="Texture2D" uid="uid://b16ylio2ht6q5" path="res://assets/leave_game.webp" id="3_8ln24"]
+
+[node name="main_menu" type="Control" unique_id=659634467]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wu84c")
+
+[node name="background" type="TextureRect" parent="." unique_id=715976229]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("1_bqqt6")
+
+[node name="play_button" type="Button" parent="." unique_id=465558831]
+layout_mode = 0
+offset_left = 407.00003
+offset_top = 472.0
+offset_right = 1169.0
+offset_bottom = 632.0
+scale = Vector2(0.45, 0.45)
+icon = ExtResource("2_wu84c")
+
+[node name="leave_button" type="Button" parent="." unique_id=2029054241]
+layout_mode = 0
+offset_left = 407.0
+offset_top = 558.0
+offset_right = 811.0
+offset_bottom = 644.0
+scale = Vector2(0.85, 0.85)
+icon = ExtResource("3_8ln24")
+
+[connection signal="button_down" from="play_button" to="." method="_on_play_button_button_down"]
+[connection signal="button_down" from="leave_button" to="." method="_on_leave_button_button_down"]

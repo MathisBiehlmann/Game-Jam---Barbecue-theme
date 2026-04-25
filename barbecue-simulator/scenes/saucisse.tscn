@@ -3,13 +3,11 @@
 [ext_resource type="Script" uid="uid://c7jq6qg3mgsdq" path="res://scripts/saucisse.gd" id="1_p6tll"]
 [ext_resource type="Texture2D" uid="uid://d3sf35qvmdtmy" path="res://assets/Sausage.png" id="1_xjd37"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p6tll"]
-radius = 36.007034
-height = 127.53076
+[sub_resource type="CircleShape2D" id="CircleShape2D_p6tll"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xjd37"]
-radius = 89.0
-height = 178.0
+radius = 61.0
+height = 122.0
 
 [node name="Saucisse" type="RigidBody2D" unique_id=65002897]
 position = Vector2(19, 11)
@@ -21,9 +19,64 @@ scale = Vector2(0.30294117, 0.24550898)
 texture = ExtResource("1_xjd37")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1198748416]
-position = Vector2(4, -1.0000153)
+position = Vector2(-33, 17)
 rotation = 1.0471976
-shape = SubResource("CapsuleShape2D_p6tll")
+shape = SubResource("CircleShape2D_p6tll")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=79816985]
+position = Vector2(-25, 16)
+rotation = 1.0471976
+shape = SubResource("CircleShape2D_p6tll")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=761631422]
+position = Vector2(-12.000002, 12.000002)
+rotation = 1.0471976
+shape = SubResource("CircleShape2D_p6tll")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=666197482]
+position = Vector2(2, 6)
+rotation = 1.0471976
+shape = SubResource("CircleShape2D_p6tll")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="." unique_id=804403513]
+position = Vector2(14, -1)
+rotation = 1.0471976
+shape = SubResource("CircleShape2D_p6tll")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="." unique_id=2049557956]
+position = Vector2(23, -9)
+rotation = 1.0471976
+shape = SubResource("CircleShape2D_p6tll")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="." unique_id=1763168924]
+position = Vector2(32, -19)
+rotation = 1.0471976
+shape = SubResource("CircleShape2D_p6tll")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="." unique_id=70287759]
+position = Vector2(36.000004, -26)
+rotation = 1.0471976
+shape = SubResource("CircleShape2D_p6tll")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="." unique_id=2051056176]
+position = Vector2(30, -25.000002)
+rotation = 1.0471976
+shape = SubResource("CircleShape2D_p6tll")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="." unique_id=884396756]
+position = Vector2(22, -14)
+rotation = 1.0471976
+shape = SubResource("CircleShape2D_p6tll")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="." unique_id=1657159293]
+position = Vector2(11, -4)
+rotation = 1.0471976
+shape = SubResource("CircleShape2D_p6tll")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="." unique_id=1341729759]
+position = Vector2(-5, 7)
+rotation = 1.0471976
+shape = SubResource("CircleShape2D_p6tll")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=76019030]
 
