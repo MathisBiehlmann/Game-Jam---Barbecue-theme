@@ -11,6 +11,7 @@ height = 122.0
 
 [node name="Saucisse" type="RigidBody2D" unique_id=65002897]
 position = Vector2(19, 11)
+collision_mask = 3
 script = ExtResource("1_p6tll")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2092703342]
@@ -79,6 +80,7 @@ rotation = 1.0471976
 shape = SubResource("CircleShape2D_p6tll")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=76019030]
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=250551874]
 position = Vector2(3, 0)
