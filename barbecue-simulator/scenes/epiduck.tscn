@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ds661ywgsh25e"]
+
+[ext_resource type="Texture2D" uid="uid://dsdbugcg3re5a" path="res://assets/epiduckpng.webp" id="1_qpviu"]
+
+[node name="Sprite2D" type="Sprite2D" unique_id=989461832]
+position = Vector2(-2, -106)
+scale = Vector2(0.6227273, 0.616925)
+texture = ExtResource("1_qpviu")

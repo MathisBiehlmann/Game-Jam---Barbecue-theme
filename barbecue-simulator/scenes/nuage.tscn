@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://iqeuo8t3pd72"]
+
+[ext_resource type="Texture2D" uid="uid://casdsanjb4qpm" path="res://assets/illustration-of-pixel-cloud-icon-png.webp" id="1_btqll"]
+
+[node name="Sprite2D" type="Sprite2D" unique_id=2086834147]
+position = Vector2(0, -100)
+scale = Vector2(0.5546875, 0.5683594)
+texture = ExtResource("1_btqll")
