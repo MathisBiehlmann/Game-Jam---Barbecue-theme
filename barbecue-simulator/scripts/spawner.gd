@@ -1,5 +1,6 @@
-extends RigidBody2D
+extends Node2D
 
+@export var objet_a_spawn: PackedScene
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -10,7 +11,5 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.name == "CharacterBody2D":
-		print(body.name)
-		queue_free()
+func spawn():
+	pass
