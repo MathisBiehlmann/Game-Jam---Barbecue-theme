@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://rod8t68wimjc"]
+
+[ext_resource type="Script" uid="uid://drs1ow2mypge4" path="res://scripts/pause_menu.gd" id="1_n87rw"]
+[ext_resource type="Texture2D" uid="uid://dnc8x8we1uckx" path="res://assets/pause_menu.webp" id="2_myx47"]
+
+[sub_resource type="Gradient" id="Gradient_myx47"]
+colors = PackedColorArray(0.54901963, 0.19215687, 0, 0.3137255, 0.54901963, 0.33333334, 0, 0.3137255)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kukqi"]
+gradient = SubResource("Gradient_myx47")
+fill_to = Vector2(0, 1)
+
+[node name="pause_menu" type="CanvasLayer" unique_id=1728686249]
+script = ExtResource("1_n87rw")
+
+[node name="black background" type="Panel" parent="." unique_id=2022235870]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background" type="TextureRect" parent="." unique_id=270148644]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_kukqi")
+
+[node name="pause_texture" type="TextureRect" parent="." unique_id=1786741028]
+offset_right = 1331.0
+offset_bottom = 784.0
+scale = Vector2(0.86, 0.86)
+texture = ExtResource("2_myx47")
+
+[node name="resume_button" type="Button" parent="." unique_id=1856676371]
+offset_left = 424.0
+offset_top = 201.0
+offset_right = 732.0
+offset_bottom = 259.0
+
+[node name="options_button" type="Button" parent="." unique_id=1375171512]
+offset_left = 424.0
+offset_top = 269.0
+offset_right = 731.0
+offset_bottom = 324.0
+
+[node name="restart_button" type="Button" parent="." unique_id=1407459949]
+offset_left = 425.0
+offset_top = 337.0
+offset_right = 731.0
+offset_bottom = 395.0
+
+[node name="main_menu_button" type="Button" parent="." unique_id=67038812]
+offset_left = 424.0
+offset_top = 407.0
+offset_right = 731.0
+offset_bottom = 462.0
+
+[connection signal="button_down" from="resume_button" to="." method="_on_resume_button_button_down"]
+[connection signal="button_down" from="options_button" to="." method="_on_options_button_button_down"]
+[connection signal="button_down" from="restart_button" to="." method="_on_restart_button_button_down"]
+[connection signal="button_down" from="main_menu_button" to="." method="_on_main_menu_button_button_down"]
