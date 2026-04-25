@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cq5l1qlpwjnuc"]
 
 [ext_resource type="Script" uid="uid://biiwf42cmeq5n" path="res://scripts/player.gd" id="1_qlg0r"]
-[ext_resource type="Texture2D" uid="uid://b34oe3bpgqnvu" path="res://assets/Fogo_2.png" id="2_tuyoq"]
 [ext_resource type="Texture2D" uid="uid://djlrqo47g73ds" path="res://assets/bbq_sprite_sheet.webp" id="6_tuyoq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
@@ -22,14 +21,6 @@ region = Rect2(960, 0, 320, 500)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sweqy"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_tuyoq")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qhqgy")

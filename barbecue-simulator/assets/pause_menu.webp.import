@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b34oe3bpgqnvu"
-path="res://.godot/imported/Fogo_2.png-788372871285ba2304fb945619516c9c.ctex"
+uid="uid://dnc8x8we1uckx"
+path="res://.godot/imported/pause_menu.webp-8bdc6fa058305cdf700697c0e39b6ac6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Fogo_2.png"
-dest_files=["res://.godot/imported/Fogo_2.png-788372871285ba2304fb945619516c9c.ctex"]
+source_file="res://assets/pause_menu.webp"
+dest_files=["res://.godot/imported/pause_menu.webp-8bdc6fa058305cdf700697c0e39b6ac6.ctex"]
 
 [params]
 
