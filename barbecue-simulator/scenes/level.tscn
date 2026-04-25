@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://rliqthpfrswp" path="res://assets/tiles_spritesheet.png" id="1_2q6dc"]
 [ext_resource type="PackedScene" path="res://scenes/dead_zone.tscn" id="2_w7c3h"]
 [ext_resource type="PackedScene" uid="uid://cq5l1qlpwjnuc" path="res://scenes/player.tscn" id="3_w8frs"]
+[ext_resource type="PackedScene" uid="uid://gfjqt0x1k8yr" path="res://scenes/spawner.tscn" id="4_2r41h"]
+[ext_resource type="PackedScene" uid="uid://cql1h1vshf2vj" path="res://scenes/saucisse.tscn" id="4_mx8sn"]
 [ext_resource type="PackedScene" path="res://scenes/saucisse.tscn" id="4_mx8sn"]
 [ext_resource type="PackedScene" path="res://music.tscn" id="5_ppgk2"]
 
@@ -207,6 +209,62 @@ position = Vector2(-8, 911)
 [node name="CharacterBody2D" parent="." unique_id=781164052 instance=ExtResource("3_w8frs")]
 position = Vector2(559, 362)
 
+[node name="spawner" parent="." unique_id=382094831 instance=ExtResource("4_2r41h")]
+position = Vector2(532, -406)
+objet_a_spawn = ExtResource("4_mx8sn")
+
+[node name="Timer" parent="spawner" index="0" unique_id=2090249009]
+wait_time = 3.5
+
+[node name="spawner2" parent="." unique_id=1719142515 instance=ExtResource("4_2r41h")]
+position = Vector2(974, -490)
+objet_a_spawn = ExtResource("4_mx8sn")
+
+[node name="Timer" parent="spawner2" index="0" unique_id=2090249009]
+wait_time = 4.346
+
+[node name="spawner3" parent="." unique_id=1891536296 instance=ExtResource("4_2r41h")]
+position = Vector2(-542, -707)
+objet_a_spawn = ExtResource("4_mx8sn")
+
+[node name="Timer" parent="spawner3" index="0" unique_id=2090249009]
+wait_time = 16.523
+
+[node name="spawner4" parent="." unique_id=1746950186 instance=ExtResource("4_2r41h")]
+position = Vector2(-194, -594)
+objet_a_spawn = ExtResource("4_mx8sn")
+
+[node name="Timer" parent="spawner4" index="0" unique_id=2090249009]
+wait_time = 8.474
+
+[node name="spawner5" parent="." unique_id=101462726 instance=ExtResource("4_2r41h")]
+position = Vector2(147, -362)
+objet_a_spawn = ExtResource("4_mx8sn")
+
+[node name="Timer" parent="spawner5" index="0" unique_id=2090249009]
+wait_time = 5.676
+
+[node name="spawner6" parent="." unique_id=512709277 instance=ExtResource("4_2r41h")]
+position = Vector2(1640, -329)
+objet_a_spawn = ExtResource("4_mx8sn")
+
+[node name="Timer" parent="spawner6" index="0" unique_id=2090249009]
+wait_time = 12.65
+
+[node name="spawner7" parent="." unique_id=1454052916 instance=ExtResource("4_2r41h")]
+position = Vector2(1319, -327)
+objet_a_spawn = ExtResource("4_mx8sn")
+
+[node name="Timer" parent="spawner7" index="0" unique_id=2090249009]
+wait_time = 9.684
+
+[editable path="spawner"]
+[editable path="spawner2"]
+[editable path="spawner3"]
+[editable path="spawner4"]
+[editable path="spawner5"]
+[editable path="spawner6"]
+[editable path="spawner7"]
 [node name="Saucisse" parent="." unique_id=65002897 instance=ExtResource("4_mx8sn")]
 position = Vector2(654, -320)
 
