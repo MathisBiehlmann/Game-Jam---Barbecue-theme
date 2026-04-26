@@ -66,3 +66,6 @@ offset = Vector2(0, -100)
 collision_mask = 5
 
 [node name="Line2D" type="Line2D" parent="." unique_id=1907179959]
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1432603297]
+position = Vector2(-3, -73)
