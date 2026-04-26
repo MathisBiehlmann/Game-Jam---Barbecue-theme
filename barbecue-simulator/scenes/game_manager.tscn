@@ -1,6 +1,10 @@
-[gd_scene format=3 uid="uid://wyueuw48jao3"]
+[gd_scene format=3 uid="uid://c2mlytdnc2orx"]
 
 [ext_resource type="Script" uid="uid://bl5yy0hc0xldj" path="res://scripts/gamemanager.gd" id="1_8cp1g"]
+[ext_resource type="AudioStream" uid="uid://g8bo30qi1euc" path="res://assets/Points.mp3" id="2_glms7"]
 
 [node name="game_manager" type="Node" unique_id=1303987176]
 script = ExtResource("1_8cp1g")
+
+[node name="Score_sound" type="AudioStreamPlayer" parent="." unique_id=562648358]
+stream = ExtResource("2_glms7")
