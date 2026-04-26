@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://rod8t68wimjc"]
 
-[ext_resource type="Script" uid="uid://drs1ow2mypge4" path="res://scripts/pause_menu.gd" id="1_n87rw"]
+[ext_resource type="Script" path="res://scripts/pause_menu.gd" id="1_n87rw"]
 [ext_resource type="Texture2D" uid="uid://dnc8x8we1uckx" path="res://assets/pause_menu.webp" id="2_myx47"]
 
 [sub_resource type="Gradient" id="Gradient_myx47"]
@@ -9,6 +9,14 @@ colors = PackedColorArray(0.54901963, 0.19215687, 0, 0.3137255, 0.54901963, 0.33
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_kukqi"]
 gradient = SubResource("Gradient_myx47")
 fill_to = Vector2(0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_myx47"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kukqi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5d2l8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7l7mv"]
 
 [node name="pause_menu" type="CanvasLayer" unique_id=1728686249]
 script = ExtResource("1_n87rw")
@@ -40,24 +48,28 @@ offset_left = 424.0
 offset_top = 201.0
 offset_right = 732.0
 offset_bottom = 259.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_myx47")
 
 [node name="options_button" type="Button" parent="." unique_id=1375171512]
 offset_left = 424.0
 offset_top = 269.0
 offset_right = 731.0
 offset_bottom = 324.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kukqi")
 
 [node name="restart_button" type="Button" parent="." unique_id=1407459949]
 offset_left = 425.0
 offset_top = 337.0
 offset_right = 731.0
 offset_bottom = 395.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5d2l8")
 
 [node name="main_menu_button" type="Button" parent="." unique_id=67038812]
 offset_left = 424.0
 offset_top = 407.0
 offset_right = 731.0
 offset_bottom = 462.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7l7mv")
 
 [connection signal="button_down" from="resume_button" to="." method="_on_resume_button_button_down"]
 [connection signal="button_down" from="options_button" to="." method="_on_options_button_button_down"]
