@@ -1,5 +1,6 @@
 extends Node
 @onready var score_label: Label = $"../score"
+@onready var score_sound: AudioStreamPlayer = $Score_sound
 
 var score = 0
 
@@ -15,3 +16,4 @@ func _process(delta: float) -> void:
 func augmenter_score():
 	score += 1
 	score_label.text = str(score)
+	score_sound.play()
