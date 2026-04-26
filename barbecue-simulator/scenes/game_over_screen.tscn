@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://cq57w4ya3p84f"]
+
+[ext_resource type="Script" uid="uid://com3l6n2d6qf5" path="res://scripts/game_over_screen.gd" id="1_61w2s"]
+[ext_resource type="Texture2D" uid="uid://ddn2rl4si04es" path="res://assets/game_over.webp" id="1_iwahs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iwahs"]
+
+[node name="game_over_screen" type="CanvasLayer" unique_id=378972091]
+script = ExtResource("1_61w2s")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=868402012]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.86, 0.86)
+texture = ExtResource("1_iwahs")
+
+[node name="retry_button" type="Button" parent="." unique_id=1226315290]
+offset_left = 431.99997
+offset_top = 411.0
+offset_right = 780.0
+offset_bottom = 498.0
+scale = Vector2(0.86, 0.86)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_iwahs")
+
+[node name="main_menu_button" type="Button" parent="." unique_id=2106889211]
+offset_left = 432.99997
+offset_top = 510.0
+offset_right = 781.0
+offset_bottom = 597.0
+scale = Vector2(0.86, 0.86)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_iwahs")
+
+[connection signal="button_down" from="retry_button" to="." method="_on_retry_button_button_down"]
+[connection signal="button_down" from="main_menu_button" to="." method="_on_main_menu_button_button_down"]

@@ -1,14 +1,16 @@
 extends Area2D
 
 @onready var music: AudioStreamPlayer = $Defeat
+@onready var game_over_screen = $"../game_over_screen"
+
+func _ready() -> void:
+	game_over_screen.hide()
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":
-		# Bloque le personnage
+		game_over_screen.show()
+		
 		body.set_physics_process(false)
 		
 		music.play()
-		await music.finished
 		
-		body.set_physics_process(true)
-		get_tree().reload_current_scene()
