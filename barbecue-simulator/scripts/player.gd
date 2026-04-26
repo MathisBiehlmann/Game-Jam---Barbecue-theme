@@ -15,24 +15,25 @@ const GRAPPLE_RANGE: float = 400.0
 
 
 func _physics_process(delta: float) -> void:
-	# Gravité (désactivée si grapin actif)
 	if not is_on_floor() and not is_grappling:
 		velocity += get_gravity() * delta
 
-	# Saut
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
-	# Déplacement gauche/droite
 	var direction := Input.get_axis("move_left", "move_right")
 	if direction:
-		velocity.x = direction * SPEED
+		# Si grapin actif, bloque la direction opposée au grapin
+		if is_grappling:
+			var to_grapple = (grapple_point - global_position).normalized()
+			if Vector2(direction, 0).dot(Vector2(to_grapple.x, 0)) >= 0:
+				velocity.x = direction * SPEED
+		else:
+			velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
-	# Grapin
 	_handle_grapple(delta)
-
 	move_and_slide()
 
 
@@ -67,15 +68,12 @@ func _handle_grapple(delta: float) -> void:
 		rope.clear_points()
 		return
 
-	# Attire le personnage vers le point
 	var direction = (grapple_point - global_position).normalized()
 	velocity += direction * GRAPPLE_SPEED * delta
 
-	# Dessine la corde
 	rope.clear_points()
 	rope.add_point(Vector2.ZERO)
 	rope.add_point(to_local(grapple_point))
 
-	# Relâche si on arrive au point
 	if global_position.distance_to(grapple_point) < 20.0:
 		_release_grapple()
