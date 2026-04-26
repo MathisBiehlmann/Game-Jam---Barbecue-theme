@@ -1,6 +1,7 @@
-extends RigidBody2D
+extends Node
+@onready var score_label: Label = $"../score"
 
-@onready var gamemanager: Node = get_node("/root/Level1/game_manager")
+var score = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,7 +12,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.name == "CharacterBody2D":
-		gamemanager.augmenter_score()
-		queue_free()
+func augmenter_score():
+	score += 1
+	score_label.text = str(score)

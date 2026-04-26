@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://rliqthpfrswp" path="res://assets/tiles_spritesheet.png" id="1_2q6dc"]
 [ext_resource type="PackedScene" uid="uid://ds661ywgsh25e" path="res://scenes/epiduck.tscn" id="1_b121j"]
 [ext_resource type="Script" uid="uid://cwp0kdv4672w1" path="res://scripts/level.gd" id="1_t1rx8"]
+[ext_resource type="PackedScene" uid="uid://wyueuw48jao3" path="res://scenes/game_manager.tscn" id="2_64w2a"]
 [ext_resource type="PackedScene" uid="uid://dv8pvhk2ujw6d" path="res://scenes/dead_zone.tscn" id="2_w7c3h"]
 [ext_resource type="PackedScene" uid="uid://cq5l1qlpwjnuc" path="res://scenes/player.tscn" id="3_w8frs"]
 [ext_resource type="PackedScene" uid="uid://gfjqt0x1k8yr" path="res://scenes/spawner.tscn" id="4_2r41h"]
@@ -12,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://iqeuo8t3pd72" path="res://scenes/nuage.tscn" id="9_8c41q"]
 [ext_resource type="PackedScene" uid="uid://rod8t68wimjc" path="res://scenes/pause_menu.tscn" id="10_olg7q"]
 [ext_resource type="PackedScene" uid="uid://cq57w4ya3p84f" path="res://scenes/game_over_screen.tscn" id="12_8iemx"]
+[ext_resource type="PackedScene" uid="uid://bw1e65roeniyb" path="res://scenes/score.tscn" id="14_fpun6"]
 
 [sub_resource type="Gradient" id="Gradient_olg7q"]
 offsets = PackedFloat32Array(0.006024096, 1)
@@ -214,6 +216,8 @@ sources/0 = SubResource("TileSetAtlasSource_w7c3h")
 position = Vector2(-5, -2)
 script = ExtResource("1_t1rx8")
 
+[node name="game_manager" parent="." unique_id=1303987176 instance=ExtResource("2_64w2a")]
+
 [node name="TextureRect" type="TextureRect" parent="." unique_id=897233392]
 offset_left = -1890.0
 offset_top = -893.0
@@ -342,6 +346,12 @@ visible = false
 
 [node name="game_over_screen" parent="." unique_id=378972091 instance=ExtResource("12_8iemx")]
 visible = false
+
+[node name="score" parent="." unique_id=741883596 instance=ExtResource("14_fpun6")]
+offset_left = 487.0
+offset_top = 42.0
+offset_right = 621.0
+offset_bottom = 125.0
 
 [editable path="all_spawner/spawner"]
 [editable path="all_spawner/spawner2"]
