@@ -1,5 +1,4 @@
 extends CanvasLayer
-@onready var main_menu = preload("res://scenes/main_menu.tscn")
 
 var pause = false
 

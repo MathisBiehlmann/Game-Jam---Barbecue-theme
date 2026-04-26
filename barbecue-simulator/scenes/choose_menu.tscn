@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://bqh5g8v0sbave"]
+
+[ext_resource type="Texture2D" uid="uid://fi3eahfqd3jm" path="res://assets/choose_menu.png" id="1_5xrdl"]
+[ext_resource type="Script" uid="uid://dgexybj7hjwfq" path="res://scripts/choose_menu.gd" id="1_ml247"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ml247"]
+
+[node name="choose_menu" type="CanvasLayer" unique_id=130953128]
+script = ExtResource("1_ml247")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=219646919]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.86, 0.86)
+texture = ExtResource("1_5xrdl")
+
+[node name="collector_button" type="Button" parent="." unique_id=1618780684]
+offset_left = 394.0
+offset_top = 245.0
+offset_right = 771.0
+offset_bottom = 332.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ml247")
+
+[node name="time_button" type="Button" parent="." unique_id=870243985]
+offset_left = 394.0
+offset_top = 350.0
+offset_right = 771.0
+offset_bottom = 437.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ml247")
+
+[node name="free_button" type="Button" parent="." unique_id=1976851577]
+offset_left = 393.0
+offset_top = 458.0
+offset_right = 770.0
+offset_bottom = 545.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ml247")
+
+[node name="back_button" type="Button" parent="." unique_id=157160984]
+offset_left = 470.0
+offset_top = 574.0
+offset_right = 688.0
+offset_bottom = 643.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ml247")
+
+[connection signal="button_down" from="collector_button" to="." method="_on_collector_button_button_down"]
+[connection signal="button_down" from="time_button" to="." method="_on_time_button_button_down"]
+[connection signal="button_down" from="free_button" to="." method="_on_free_button_button_down"]
+[connection signal="button_down" from="back_button" to="." method="_on_back_button_button_down"]
