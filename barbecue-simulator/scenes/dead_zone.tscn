@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dv8pvhk2ujw6d"]
 
 [ext_resource type="Script" uid="uid://clny6i85w3uhx" path="res://scripts/dead_zone.gd" id="1_aif4b"]
+[ext_resource type="AudioStream" uid="uid://b0hd3e1mw3465" path="res://assets/Défaite.mp3" id="2_6l7wu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6l7wu"]
 size = Vector2(10000, 300)
@@ -11,5 +12,8 @@ script = ExtResource("1_aif4b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=778688347]
 shape = SubResource("RectangleShape2D_6l7wu")
+
+[node name="Defeat" type="AudioStreamPlayer" parent="." unique_id=1408742176]
+stream = ExtResource("2_6l7wu")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c7jq6qg3mgsdq" path="res://scripts/saucisse.gd" id="1_p6tll"]
 [ext_resource type="Texture2D" uid="uid://d3sf35qvmdtmy" path="res://assets/Sausage.png" id="1_xjd37"]
+[ext_resource type="AudioStream" uid="uid://g8bo30qi1euc" path="res://assets/Points.mp3" id="3_qi8rb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p6tll"]
 
@@ -85,6 +86,9 @@ collision_mask = 3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=250551874]
 position = Vector2(3, 0)
 shape = SubResource("CapsuleShape2D_xjd37")
+
+[node name="PickUpSound" type="AudioStreamPlayer" parent="." unique_id=1977187373]
+stream = ExtResource("3_qi8rb")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -8,6 +8,8 @@ const JUMP_VELOCITY = -400.0
 @onready var ray: RayCast2D = $RayCast2D
 @onready var rope: Line2D = $Line2D
 @onready var grapple_origin: Marker2D = $Marker2D
+@onready var grapple_sound: AudioStreamPlayer = $GrappleSound
+@onready var jump_sound: AudioStreamPlayer = $JumpSound
 
 var grapple_point: Vector2 = Vector2.ZERO
 var is_grappling: bool = false
@@ -21,6 +23,7 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		jump_sound.play()
 
 	var direction := Input.get_axis("move_left", "move_right")
 	if direction:
@@ -56,6 +59,7 @@ func _shoot_grapple() -> void:
 		grapple_point = ray.get_collision_point()
 		is_grappling = true
 		rope.visible = true
+		grapple_sound.play()
 
 
 func _release_grapple() -> void:
