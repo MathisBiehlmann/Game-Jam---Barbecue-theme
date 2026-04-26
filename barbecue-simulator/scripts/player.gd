@@ -7,6 +7,7 @@ const JUMP_VELOCITY = -400.0
 # === GRAPIN ===
 @onready var ray: RayCast2D = $RayCast2D
 @onready var rope: Line2D = $Line2D
+@onready var grapple_origin: Marker2D = $Marker2D
 
 var grapple_point: Vector2 = Vector2.ZERO
 var is_grappling: bool = false
@@ -23,7 +24,6 @@ func _physics_process(delta: float) -> void:
 
 	var direction := Input.get_axis("move_left", "move_right")
 	if direction:
-		# Si grapin actif, bloque la direction opposée au grapin
 		if is_grappling:
 			var to_grapple = (grapple_point - global_position).normalized()
 			if Vector2(direction, 0).dot(Vector2(to_grapple.x, 0)) >= 0:
@@ -71,8 +71,9 @@ func _handle_grapple(delta: float) -> void:
 	var direction = (grapple_point - global_position).normalized()
 	velocity += direction * GRAPPLE_SPEED * delta
 
+	# Dessine la corde depuis le Marker2D
 	rope.clear_points()
-	rope.add_point(Vector2.ZERO)
+	rope.add_point(to_local(grapple_origin.global_position))
 	rope.add_point(to_local(grapple_point))
 
 	if global_position.distance_to(grapple_point) < 20.0:
